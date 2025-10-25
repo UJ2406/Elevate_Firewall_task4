@@ -144,7 +144,13 @@ Try to connect to a blocked port/service (should fail).
 ```
 firewall-config-task4/
 ├── README.md                 # This file
-├── screenshots/images        # Firewall config & test images
+├── screenshots               # Firewall config & test images
+    ├── UFW Installed
+    ├── Firewall Enabled
+    ├── Allow SSH
+    ├── Block Telnet
+    ├── Telnet Blocked Test
+    ├── Rules Table, Delete Rule Success          
 ├── ufw-commands.txt          # All commands used
 ├── findings.txt              # List/summary of rule logic
 ```
