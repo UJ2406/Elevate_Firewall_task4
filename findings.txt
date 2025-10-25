@@ -1,0 +1,35 @@
+Firewall Configuration - Findings
+
+1. UFW was installed and enabled on the system, confirming active firewall protection.
+
+2. Rule added to ALLOW inbound SSH (port 22) for secure remote management:
+   Command: sudo ufw allow 22
+   Result: SSH connections permitted (shown in rule table and screenshot)
+
+3. Rule added to DENY inbound Telnet (port 23) for security hardening:
+   Command: sudo ufw deny 23
+   Result: Telnet connections blocked (verified by failed telnet connection test)
+
+4. Verified firewall rules using:
+   Command: sudo ufw status numbered
+   Result: Confirmed correct rule order and logic (ALLOW 22, DENY 23 for both IPv4 & IPv6)
+
+5. Deleted the Allow 22 rule (#2):
+   Command: sudo ufw delete 2
+   Result: Rule for SSH port removed, visible in updated rule table
+
+6. Re-tested Telnet connection using:
+   Command: telnet localhost 23
+   Result: Connection refused, confirming blockage by firewall rule
+
+7. All changes and tests documented with screenshots of terminal, rule lists, and results.
+
+Summary (Key Points):
+
+- Telnet (port 23) was successfully blocked, enhancing system security.
+- SSH (port 22) was allowed, maintaining secure administrative access until deleted for demonstration.
+- Firewall rules were clearly visible and easily managed with UFW numbered status.
+- All actions performed using straightforward UFW commands.
+- Proper firewall configuration and testing is essential for any security posture audit.
+
+End of findings.
