@@ -1,0 +1,8 @@
+sudo apt install ufw       # Install/check UFW
+sudo ufw enable            # Enable firewall
+sudo ufw status numbered   # List rules
+sudo ufw allow 22          # Allow SSH
+sudo ufw deny 23           # Deny Telnet
+sudo ufw status numbered   # Check numbered rules
+sudo ufw delete 2          # Delete rule #2 
+telnet localhost 23        # Test Telnet block
