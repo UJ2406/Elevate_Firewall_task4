@@ -90,6 +90,42 @@ Connection refused (as expected)
 
 ---
 
+## 🧠 Concepts Learned 
+
+1.  **Firewall Fundamentals**
+   - Firewalls are essential security tools that filter incoming and outgoing network traffic based on user-defined rules to protect systems from unauthorized access.
+
+2.  **Linux UFW Management**
+   - Using UFW (Uncomplicated Firewall), I learned to easily install, enable, and check firewall status and manage iptables rules in a more user-friendly way.
+
+3.  **Rule Creation, Testing, and Deletion**
+   - Understood and practiced adding rules to allow (e.g., SSH port 22) and block (e.g., Telnet port 23) specific ports.
+   - Practiced deleting unwanted rules and verifying active rule lists with the `status numbered` command.
+
+4.  **Blocking Insecure Services**
+   - Telnet (port 23) was specifically blocked due to its insecure, plaintext communication.
+   - Only allowing trusted services (like SSH) is a core security practice.
+
+5.  **Testing & Verification**
+   - Used telnet command-line tool to verify the firewall’s effectiveness (observed “Connection refused” when blocking was in place).
+
+6.  **Numbered Rule Management**
+   - Learned to work with UFW's numbered rules for easy removal and audit, supporting clear and organized rule management.
+
+7.  **Network Port & Protocol Awareness**
+   - Differentiated between protocols/ports and understood the security risk and role of each.
+
+8.  **Stateful Filtering**
+   - Acknowledged that modern firewalls (like UFW/iptables) are stateful and track active connections for more secure and efficient filtering.
+
+9.  **Documentation & Evidence**
+   - Collected command logs and screenshots at each step for proper documentation and audit trail—crucial for real-world infosec reporting.
+
+10.  **General Best Practices**
+    - Only open what you need, document all changes, test after every rule, and regularly review/update your rules for continued protection.
+
+---
+     
 ## 📝 Commands Used (All Together)
 
 ```
